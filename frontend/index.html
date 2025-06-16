@@ -1,0 +1,71 @@
+<html>
+    <head>
+        <title>LoginPage</title>
+        <style>
+            @import url('https://fonts.googleapis.com/css2?family=Merriweather&display=swap');
+            body {
+                background-image: url("sfondo1.png");
+                background-size: cover;
+                background-repeat: no-repeat;
+                background-position: center center;
+                margin: 0;
+                height: 100vh;
+                overflow: hidden;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+            }
+            #login {
+                width: 600px;
+                height: 300px;
+                background-color: rgba(128, 0, 128, 0.4);
+                backdrop-filter: blur(8px);
+                margin:0;
+                border-radius: 20px;
+
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+
+                text-align: center;
+                font-family: "Merriweather", serif;
+                font-size: 25px;
+                color: white;
+            }
+            input[type="text"] {
+                width: 180px;
+                height: 30px;
+                margin-bottom: 35px;
+                border-radius: 5px;
+                border: 1px solid #ccc;
+                padding: 5px;
+                font-size: 16px;
+            }
+            #register{
+                font-size: 15px;
+            }
+            button {
+                color: white;
+                background-color: purple;
+                width: 150px;
+                height: 40px;
+                border-radius: 10px;
+                border: none;
+                font-size: 18px;
+                cursor: pointer;
+            }
+            a{  color: white; }
+
+        </style>
+    </head>
+    <body>
+        <div id="login">
+            <p>User Login</p>
+            <input type="text" placeholder="username">
+            <input type="text" placeholder="password">
+            <button>Login</button>
+            <p id="register">don't have an account? <a href="register.html">Register</a> </p>
+        </div>
+    </body>
+</html>

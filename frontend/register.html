@@ -1,0 +1,66 @@
+<html>
+<head>
+    <title>RegisterPage</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Merriweather&display=swap');
+        body {
+            background-image: url("sfondo1.png");
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-position: center center;
+            margin: 0;
+            height: 100vh;
+            overflow: hidden;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        #login {
+            width: 600px;
+            height: 300px;
+            background-color: rgba(128, 0, 128, 0.4);
+            backdrop-filter: blur(8px);
+            margin:0;
+            border-radius: 20px;
+
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+
+            text-align: center;
+            font-family: "Merriweather", serif;
+            font-size: 25px;
+            color: white;
+        }
+        input[type="text"] {
+            width: 180px;
+            height: 30px;
+            margin-bottom: 35px;
+            border-radius: 5px;
+            border: 1px solid #ccc;
+            padding: 5px;
+            font-size: 16px;
+        }
+        button {
+            color: white;
+            background-color: purple;
+            width: 150px;
+            height: 40px;
+            border-radius: 10px;
+            border: none;
+            font-size: 18px;
+            cursor: pointer;
+        }
+
+    </style>
+</head>
+<body>
+<div id="login">
+    <p>User Registration</p>
+    <input type="text" placeholder="username">
+    <input type="text" placeholder="password">
+    <button>Register</button>
+</div>
+</body>
+</html>
