@@ -4,7 +4,7 @@ document.getElementById('registrationForm').addEventListener('submit', function(
     const username = document.getElementById('username').value;
     const password = document.getElementById('password').value;
 
-    fetch('/api/register', {
+    fetch('http://localhost:8080/api/auth/login', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({ username: username, password: password })
