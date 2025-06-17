@@ -4,18 +4,15 @@ document.getElementById('registrationForm').addEventListener('submit', function(
     const username = document.getElementById('username').value;
     const password = document.getElementById('password').value;
 
-    fetch('http://localhost:8080/api/auth/login', {
+    fetch('http://localhost:8081/api/auth/register', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({ username: username, password: password })
+        body: JSON.stringify({ username: username, password: password }) // match con @RequestBody User
     })
-        .then(response => {
-            if (!response.ok) throw new Error('Registrazione fallita');
-            return response.json();
-        })
+        .then(response => response.json())
         .then(data => {
             if (data.success) {
-                window.location.href = 'RegistrationSuccesfull.html';
+                window.location.href = 'registrationSuccessful.html';
             } else {
                 alert('Registrazione non riuscita: ' + (data.message || 'Errore sconosciuto'));
             }
@@ -23,4 +20,4 @@ document.getElementById('registrationForm').addEventListener('submit', function(
         .catch(error => {
             alert('Errore durante la registrazione: ' + error.message);
         });
-})
+});

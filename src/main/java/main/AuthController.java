@@ -1,3 +1,5 @@
+package main;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
@@ -20,11 +22,9 @@ public class AuthController {
         this.userService = userService;
     }
 
-    // Login: risponde solo se utente esiste e password corretta,
-    // altrimenti ritorna errore 401 Unauthorized
     @PostMapping("/login")
     public ResponseEntity<Void> login(@RequestBody Map<String, String> payload) {
-        String username = payload.get("login");  // attenzione: nel JS il campo è "login"
+        String username = payload.get("username");
         String password = payload.get("password");
 
         if (username == null || password == null) {
@@ -33,15 +33,12 @@ public class AuthController {
 
         User user = new User(username, password);
         if (userService.searchUser(user)) {
-            // Login riuscito, rispondi 200 OK senza body
             return ResponseEntity.ok().build();
         } else {
-            // Credenziali errate o utente non esistente
             return ResponseEntity.status(HttpStatus.UNAUTHORIZED).build();
         }
     }
 
-    // Registrazione: registra se username non esiste, altrimenti 409 Conflict
     @PostMapping("/register")
     public ResponseEntity<Map<String, Object>> register(@RequestBody User user) {
         Map<String, Object> response = new HashMap<>();
