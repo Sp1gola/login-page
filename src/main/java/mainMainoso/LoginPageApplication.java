@@ -1,4 +1,4 @@
-package com.loginpage.backend;
+package mainMainoso;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;

@@ -1,8 +1,13 @@
+import org.springframework.stereotype.Service;
+
+import java.util.ArrayList;
+import java.util.List;
+
 @Service
 public class UsersList {
     private List<User> list = new ArrayList<>();
 
-    public boolen searchUser(User user){
+    public boolean searchUser(User user){
         for(User u : list){
             if(u.getUsername().equals(user.getUsername()) && u.getPassword().equals(user.getPassword())){
                 return true;
