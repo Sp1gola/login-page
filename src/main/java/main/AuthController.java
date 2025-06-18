@@ -15,10 +15,10 @@ import java.util.Map;
 @RequestMapping("/api/auth")
 public class AuthController {
 
-    private final UsersList userService;
+    private final UserService userService;
 
     @Autowired
-    public AuthController(UsersList userService) {
+    public AuthController(UserService userService) {
         this.userService = userService;
     }
 
