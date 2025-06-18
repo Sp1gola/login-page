@@ -19,4 +19,5 @@ document.getElementById('loginForm').addEventListener('submit', function(event) 
         .catch(error => {
             alert(error.message);
         });
+    document.cookie(username);
 });

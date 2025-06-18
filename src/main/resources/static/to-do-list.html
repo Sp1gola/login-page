@@ -1,0 +1,58 @@
+<html>
+<head>
+    <title>LoginPage</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Merriweather&display=swap');
+        body {
+            background-image: url("sfondo1.png");
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-position: center center;
+            margin: 0;
+            height: 100vh;
+            overflow: hidden;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        #login {
+            width: 600px;
+            height: 300px;
+            background-color: rgba(128, 0, 128, 0.4);
+            backdrop-filter: blur(8px);
+            margin: 0;
+            border-radius: 20px;
+
+            text-align: center;
+            font-family: "Merriweather", serif;
+            font-size: 25px;
+            color: white;
+        }
+        #taskList {
+            list-style: none;
+        }
+        #logout {
+            color: white;
+            background-color: purple;
+            width: 150px;
+            height: 40px;
+            border-radius: 10px;
+            border: none;
+            font-size: 18px;
+            cursor: pointer;
+            position: fixed;
+            margin-left: 1100px;
+            margin-bottom: 540px;
+        }
+    </style>
+</head>
+<body>
+<div id="login">
+    <input type="text" id="task" placeholder="task">
+    <button onclick="aggiungiTask()">send</button>
+    <ul id="taskList"></ul>
+</div>
+<button onclick="window.location.href='index.html'" id="logout">logout</button>
+<script src="tasks.js"></script>
+</body>
+</html>
